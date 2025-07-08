@@ -1,7 +1,7 @@
-var formulario = document.querySelector("#form")
+const formulario = document.querySelector(".formulario") //Cambie a .formulario, para que pueda tomar el formulario del html
 
-formulario.onsubmit = function(e) {
-
+//formulario.onsubmit = function(e) {
+formulario.addEventListener('submit', function(e){
   e.prevent();
   
   var n = formulario.elements[0]
@@ -10,6 +10,7 @@ formulario.onsubmit = function(e) {
 
   var nombre = n.value
   var edad = e.value
+
 
   var i = na.selectedIndex
   var nacionalidad = na.options[i].value
@@ -28,7 +29,7 @@ if (nombre.length > 0
     && edad < 120) ) {
   agregarInvitado(nombre, edad, nacionalidad)
   }
-}
+});
 
 var botonBorrar = document.createElement("button")
 botonBorrar.textContent = "Eliminar invitado"
