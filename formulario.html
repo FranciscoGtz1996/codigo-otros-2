@@ -12,21 +12,21 @@
   <h1>Bienvenidos a mi fiesta</h1>
   <h2>Por favor, confirmar asistencia:</h2>
 
-  <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
+  <form class="formulario" onsubmit="return validarFormulario()"> <!--Cambie el nombre de la clase por Formulario-->
+    <label>Nombre <input type="text" name="name" id="name" autocomplete="off"></label> <!--Agregue la etiqueta label-->
     <br />
-    Edad <input type="number" name="age" id="age">
+    <label>Edad <input type="number" name="age" id="age"></label><!--Agregue la etiqueta label-->
     <br />
 
-    Nacionalidad
+    <label> Nacionalidad <!--Agregue la etiqueta label-->
     <select name="nationality" id="nationality">
       <option value="ar">Argentina</option>
       <option value="mx">Mexicana</option>
       <option value="per">Peruana</option>
       <option value="vnzl">Venezolana</option>
-    </select>
+    </select></label>
     <br />
-    <input type="submit">
+    <label><input type="submit" value="submit"/></label><!--Agregue etiqueta label-->
   </form>
 
   <div>
@@ -34,7 +34,7 @@
 
   </div>
 
-  <script src="js/formulario.js"></script> <!--Agregue carpeta js, para el formulario.js-->
+  <script src="/js/formulario.js"></script> <!--Agregue carpeta js, para el formulario.js-->
 </body>
 
 </html>
